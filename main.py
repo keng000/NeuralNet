@@ -76,3 +76,12 @@ ax[0].set_title("fit at once eta=0.0004")
 ax[1].plot(range(1, len(nn2.cost_) + 1), nn2.cost_, marker='o')
 ax[1].set_title("fit each sample eta=0.0004")
 plt.show()
+
+'''
+# 確率的勾配降下法
+SGD = NN.StochasticGradientDescent()
+SGD.fit(X, y)
+
+plt.plot(range(1, len(SGD.cost_)+1), SGD.cost_, marker='o', color='red')
+plt.show()
+'''
