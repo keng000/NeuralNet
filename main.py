@@ -21,7 +21,7 @@ plt.show()
 
 '''
 # fiting過程における誤識別数の経過
-nn = NN.NeuralNet()
+nn = NN.Perceptron()
 nn.fit(X, y)
 
 #plt.plot(range(1, len(nn.error)+1), nn.error, color='red', marker='o')
@@ -53,7 +53,7 @@ def plot_color_map(X, y, classifier, resolution=0.01):
 
     for idx, cl in enumerate(np.unique(y)):
         plt.scatter(x=X[y == cl, 0], y=X[y == cl, 1], alpha=0.8, c=cmap(idx), marker=markers[idx], label=cl)
-nn = NN.NeuralNet()
+nn = NN.Perceptron()
 nn.fit(X, y)
 plot_color_map(X, y, classifier=nn)
 plt.legend(loc = 'upper left')
@@ -61,6 +61,7 @@ plt.ylabel('Petal lenght[cm]')
 plt.xlabel('Sepal length[cm]')
 plt.show()
 '''
+
 
 #　adaptive linear neuron
 nn1 = NN.ADALINE(eta=0.0004)

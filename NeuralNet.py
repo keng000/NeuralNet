@@ -1,6 +1,6 @@
 import numpy as np
 
-class NeuralNet(object):
+class Perceptron(object):
     def __init__(self, n_iter=10, eta=0.001):
         self.n_iter = n_iter
         self.eta = eta
